@@ -1,11 +1,7 @@
 package com.selenium.project.tests;
-
-import com.selenium.project.base.BaseTest;
 import com.selenium.project.base.BaseFunctions;
+import com.selenium.project.base.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

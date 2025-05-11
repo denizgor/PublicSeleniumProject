@@ -1,10 +1,10 @@
 package com.selenium.project.base;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class BaseFunctions {
     protected WebDriver driver;
@@ -24,6 +24,15 @@ public class BaseFunctions {
      */
     public WebElement findElement(By by) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
+    public List<WebElement> findElements(By locator) {
+        try {
+            return driver.findElements(locator);
+        } catch (Exception e) {
+            System.out.println("Error finding elements: " + e.getMessage());
+            return null; // or return an empty list if preferred
+        }
     }
 
     /**
